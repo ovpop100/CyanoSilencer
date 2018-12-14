@@ -10,7 +10,7 @@ if [ -z $1 ]; then
 fi
 
 echo "split file $input in $split parts"
-split files2do.tmp -n $split -d part_
+split files2do.tmp -l $split -d part_
 
 #split $input -n $split -d part_
 FI=`ls -1 part_*`
