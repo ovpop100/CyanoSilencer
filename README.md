@@ -10,4 +10,5 @@ Identification of putative silencer in Cyanobacteria using secondary structure h
 
 ### 3)
   - predict secondary structure by SPIDER 2 (Yang Y et al 2017 / DOI: 10.1007/978-1-4939-6406-2_6)
+  run_secStructure_prediction.sh
   
