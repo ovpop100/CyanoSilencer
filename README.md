@@ -15,10 +15,12 @@ Identification of putative silencer in Cyanobacteria using secondary structure h
   
   run_secStructure_prediction.sh
 ### 4)
-  - create a BLAST DB from the secondary structure data
+  - use usearch for identify homologs instead of BLAST
 ### 5)
-  - use silencer sec. struc. sequences as query for blast
+  - use annotated  (ROK,MVAT,LSR2 and HNS) silencer sec. struc. sequences as query for usearch
   
-  blastp -db SS_BLAST/SecStrucDB -query all_SSseq.fs -out ss_blast.out -num_threads 64 -outfmt 6 -evalue 0.005&
+  usearch -search_global all_SSseq.fs -db SecStructure.fs -id 0.7 -blast6out usearch.out -maxaccepts 5000
+  or faster with
+  usearch -usearch_global all_SSseq.fs -db SecStructure.fs -id 0.7 -blast6out usearch.out -maxaccepts 5000
   
   
