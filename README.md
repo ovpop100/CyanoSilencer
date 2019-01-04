@@ -20,7 +20,9 @@ Identification of putative silencer in Cyanobacteria using secondary structure h
   - use annotated  (ROK,MVAT,LSR2 and HNS) silencer sec. struc. sequences as query for usearch
   
   usearch -search_global all_SSseq.fs -db SecStructure.fs -id 0.7 -blast6out usearch.out -maxaccepts 5000
-  or faster with
-  usearch -usearch_global all_SSseq.fs -db SecStructure.fs -id 0.7 -blast6out usearch.out -maxaccepts 5000
+### 6) 
+  - Usearch output was used to cluster the pairs with mcl (default parameter)
+### 7)
+  - check the annotation of the genes in the clusters and remove cluster that are obviously false positives (e.g. ribosomal RNA etc..) and keep all uknown genes
   
   
